@@ -45,20 +45,31 @@ Google Gemini API
 
 🚀 **How It Works**
 Sign up or log in securely.
+
 Upload or prepare your presentation.
+
 Practice your presentation.
+
 Receive AI-generated feedback on your communication.
+
 Review suggestions and continue improving with each session.
 
 🎯 **Use Cases**
 Interview preparation
+
 College presentations
+
 Public speaking practice
+
 Seminar and conference preparation
+
 Communication skill development
+
 Professional presentation coaching
 
+
 📂 **Project Structure**
+
 PresentPro/
 │── index.html
 │── css/
