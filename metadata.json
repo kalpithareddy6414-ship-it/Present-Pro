@@ -1,0 +1,10 @@
+{
+  "name": "AI Presentation Coach",
+  "description": "An interactive AI-powered coach helping students practice presentations and receive instant feedback on speaking pace, filler words, clarity, and confidence.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

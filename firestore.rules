@@ -1,0 +1,54 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // 1. Global Safety Net
+    match /{document=**} {
+      allow read, write: if false;
+    }
+    
+    // Global Helpers
+    function isSignedIn() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+    
+    function isValidId(id) {
+      return id is string && id.size() > 0 && id.size() <= 128;
+    }
+    
+    // Entity Validations (Pillar 2: Validation Blueprints)
+    function isValidUser(data) {
+      return data.uid is string && data.uid.size() <= 128
+          && data.email is string && data.email.size() <= 256;
+    }
+    
+    function isValidSession(data) {
+      return data.id is string && data.id.size() <= 128
+          && data.date is string && data.date.size() <= 128
+          && data.title is string && data.title.size() <= 200
+          && data.overallScore is number
+          && data.paceScore is number
+          && data.fillerScore is number
+          && data.clarityScore is number
+          && data.confidenceScore is number
+          && data.durationSeconds is number
+          && data.wordCount is number
+          && data.transcript is string;
+    }
+
+    // Match Rules for User profiles
+    match /users/{userId} {
+      allow get, write: if isOwner(userId) && isValidId(userId) && (request.method == 'get' || isValidUser(request.resource.data));
+      
+      // Match Rules for Practice Sessions
+      match /sessions/{sessionId} {
+        allow get, delete: if isOwner(userId) && isValidId(userId) && isValidId(sessionId);
+        allow list: if isOwner(userId) && isValidId(userId);
+        allow create, update: if isOwner(userId) && isValidId(userId) && isValidId(sessionId) && isValidSession(request.resource.data);
+      }
+    }
+  }
+}

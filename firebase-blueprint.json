@@ -1,0 +1,50 @@
+{
+  "entities": {
+    "Session": {
+      "title": "FeedbackReport",
+      "description": "A feedback report of a practice presentation",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "date": { "type": "string" },
+        "title": { "type": "string" },
+        "overallScore": { "type": "number" },
+        "paceScore": { "type": "number" },
+        "fillerScore": { "type": "number" },
+        "clarityScore": { "type": "number" },
+        "confidenceScore": { "type": "number" },
+        "pacingOverview": { "type": "string" },
+        "suggestions": { "type": "array" },
+        "fillerWordsAnalysis": { "type": "array" },
+        "paceTimeline": { "type": "array" },
+        "durationSeconds": { "type": "number" },
+        "wordCount": { "type": "number" },
+        "transcript": { "type": "string" },
+        "script": { "type": "string" }
+      },
+      "required": ["id", "date", "title", "overallScore", "paceScore", "fillerScore", "clarityScore", "confidenceScore", "durationSeconds", "wordCount", "transcript"]
+    },
+    "User": {
+      "title": "User",
+      "description": "User profile metadata",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["uid", "email"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "Private user configuration and metadata"
+    },
+    "/users/{userId}/sessions/{sessionId}": {
+      "schema": "Session",
+      "description": "Presentation practice sessions and their AI coach evaluations"
+    }
+  }
+}
