@@ -5,13 +5,21 @@ PresentPro is an AI-powered web application that helps users improve their prese
 ✨ **Features**
 
 🤖 AI-powered presentation analysis
+
 🎤 Speech evaluation and communication feedback
+
 💬 Personalized suggestions to improve speaking skills
+
 📈 Track progress over multiple practice sessions
+
 🔐 Secure user authentication with Firebase
+
 ☁️ Cloud-based data storage using Firestore
+
 📁 Upload and manage presentation files
+
 📱 Responsive and user-friendly interface
+
 🛠️ Tech Stack
 
 **Frontend**
@@ -45,7 +53,7 @@ Seminar and conference preparation
 Communication skill development
 Professional presentation coaching
 
-📂** Project Structure**
+📂 **Project Structure**
 PresentPro/
 │── index.html
 │── css/
