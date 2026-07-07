@@ -26,13 +26,17 @@ PresentPro is an AI-powered web application that helps users improve their prese
 **Frontend**
 
 HTML5
+
 CSS3
+
 JavaScript (ES6)
 
 **Backend & Database**
 
 Firebase Authentication
+
 Cloud Firestore
+
 Firebase Storage
 
 **Artificial Intelligence**
