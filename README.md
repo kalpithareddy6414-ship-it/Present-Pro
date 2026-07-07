@@ -3,6 +3,7 @@
 PresentPro is an AI-powered web application that helps users improve their presentation and communication skills through real-time AI feedback. Whether you're preparing for interviews, seminars, public speaking events, or classroom presentations, PresentPro provides personalized insights to help you speak with greater confidence and clarity.
 
 ✨ **Features**
+
 🤖 AI-powered presentation analysis
 🎤 Speech evaluation and communication feedback
 💬 Personalized suggestions to improve speaking skills
