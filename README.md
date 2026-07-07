@@ -44,6 +44,7 @@ Firebase Storage
 Google Gemini API
 
 🚀 **How It Works**
+
 Sign up or log in securely.
 
 Upload or prepare your presentation.
@@ -55,6 +56,7 @@ Receive AI-generated feedback on your communication.
 Review suggestions and continue improving with each session.
 
 🎯 **Use Cases**
+
 Interview preparation
 
 College presentations
@@ -70,6 +72,7 @@ Professional presentation coaching
 
 📂 **Project Structure**
 
+
 PresentPro/
 │── index.html
 │── css/
@@ -80,11 +83,19 @@ PresentPro/
 └── README.md
 
 🔮 **Future Enhancements**
+
 AI-powered voice tone analysis
+
 Pronunciation and fluency scoring
+
 Eye contact and body language detection
+
 Presentation timer
+
 Multi-language support
+
 Performance analytics dashboard
+
 AI-generated presentation tips
+
 Downloadable feedback reports
