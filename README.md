@@ -74,12 +74,19 @@ Professional presentation coaching
 
 
 PresentPro/
+
 │── index.html
+
 │── css/
+
 │── js/
+
 │── images/
+
 │── assets/
+
 │── firebase.js
+
 └── README.md
 
 🔮 **Future Enhancements**
